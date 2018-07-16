@@ -18,9 +18,11 @@ class Question
 
   def check_answer
     if @input == @answer
-      puts 'CORRECT'
+      puts "==> #{@input} is CORRECT! Good job #{@current_player}!"
+      puts
     else
-      puts 'INCORRECT'
+      puts "==> #{@input} is INCORRECT!"
+      puts
       @current_player.wrong
       puts "#{@current_player.name} you lost a life! #{@current_player.score} lives left."
     end
